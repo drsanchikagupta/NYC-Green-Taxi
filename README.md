@@ -1,4 +1,10 @@
 # NYC-Green-Taxi
+Let's first load the data and look at the shape of the dataframe
+```
+df1.shape
+```
+(1224158, 18)
+
 Let's get a peek into the data:
 Field Name Description
 
@@ -61,11 +67,16 @@ Field Name Description
         2= Dispatch
 
 ## **Characterize the data and comment about its quality**
+- ehail_fee has 99% Nan values.
+- There are invalid/negative observations in variables- fare_amount, extra, mta_tax, tip_amount, improvement_surcharge and total_amount.
+- There are 13958 rows out of 1224158 which has 0 trip distance.
+- There were 166 trips with passenger count as 0. 
+
 **Data Cleaning**
 - droped ehail_fee- all transactions are NaNs
 - Remove negative observations in variables- fare_amount, extra, mta_tax, tip_amount, improvement_surcharge, total_amount.
-- Removed observations with 0 trip distance values. There are 13958 rows out of 1224158 which has 0 trip distance.
-- There were 166 trips with passenger count as 0. Removed observations with passenger count as 0
+- Removed observations with 0 trip distance values. 
+- Removed observations with passenger count as 0
 - Removed outlier values in trip distance as seen from the box plot which are 3 standard deviations away from mean
 - converted the pickup time and drop off time into datetime
 
@@ -75,8 +86,31 @@ Field Name Description
 - Outliers have been removed before plotting.
 - Outliers are defined as any point located further than 3 standard deviations from the mean
 
+![](histogram%20of%20trip%20distance%20without%20outliers.png)
 
 Findings from the above histogram
 - The trip distance is skewed to the right that means the mean is greater than the median.
 - That means most of the data is on the left side of the histogram.
 - This tells us most of the trips are short distance trips between 0-3 miles of distance.
+
+## **Find interesting trip statistics grouped by hour**
+**Feature Engineering**
+- Added pickupday, pickupday_no, pickup_hour into dataframe.
+- these features are extracted from lpep_pickup_datetime and lpep_dropoff_datetime
+- added time of day feature- morning, afternoon, evening, late night
+- added is_weekday- 1 for weekday and 0 for weekend.
+
+
+From the above graph we can see that no of trips are
+
+- maximum around 7 p.m. which could be because people usually go home from work at that hour and
+minimum at 5 a.m when everyone sleeps :)
+
+![](https://github.com/drsanchikagupta/NYC-Green-Taxi/blob/main/Graph%20plotting%20pickup%20hour%20against%20no%20of%20trips.png)
+![](https://github.com/drsanchikagupta/NYC-Green-Taxi/blob/main/Graph_plotting_pickup_hour_against_trip_distance.png)
+
+The above graph plots trip distance against pickup hour and from the graph we can see:
+
+- The trip distance is maximum around 5 a.m. that maybe because of the long distance travel early morning rides. People who live far from there office have to start early to reach work.
+- The trip distance is minimum around 6 p.m- 7 p.m.
+
