@@ -101,15 +101,15 @@ Findings from the above histogram
 - added is_weekday- 1 for weekday and 0 for weekend.
 
 
-From the above graph we can see that no of trips are
+The left graph plots no of trips against pickup hour and from the graph we can see:
 
 - maximum around 7 p.m. which could be because people usually go home from work at that hour and
 minimum at 5 a.m when everyone sleeps :)
 
-![](https://github.com/drsanchikagupta/NYC-Green-Taxi/blob/main/Graph%20plotting%20pickup%20hour%20against%20no%20of%20trips.png)
-![](https://github.com/drsanchikagupta/NYC-Green-Taxi/blob/main/Graph_plotting_pickup_hour_against_trip_distance.png)
+![](Graph%20plotting%20pickup%20hour%20against%20no%20of%20trips.jpeg)
+![](Graph_plotting_pickup_hour_against_trip_distance.jpeg)
 
-The above graph plots trip distance against pickup hour and from the graph we can see:
+The right graph plots trip distance against pickup hour and from the graph we can see:
 
 - The trip distance is maximum around 5 a.m. that maybe because of the long distance travel early morning rides. People who live far from there office have to start early to reach work.
 - The trip distance is minimum around 6 p.m- 7 p.m.
