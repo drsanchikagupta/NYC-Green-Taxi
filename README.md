@@ -442,6 +442,9 @@ The most important features for getting better trips is as follows:
 - The above graph shows the distribution of trip distance with days of the week. 
 -  We can see from the above graph that maximum distances are travelled on Sunday.
 
+![](more_visualizations/trip_dist_cat_pickup_dropoff.jpg)
+
+- The above graph shows the the distribution of short, medium and long trips by pickup day.
 
 #### total amount<a id="E.6"></a>
 
@@ -454,3 +457,4 @@ The most important features for getting better trips is as follows:
 #### Conclusion and Future Work
 - Above is a basic visualization analysis of the trip data. In interest of time I will stop at this point.
 - As a future work, I will like to analyse the data further and understand how trip distance, fare etc are related to each other.
+- More variables can be feature engineered by taking into account Pickup location and Drop off location. This can give us an idea about which location has more trips and trip distances from those locations.
