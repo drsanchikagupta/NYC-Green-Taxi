@@ -1,4 +1,5 @@
 # NYC-Green-Taxi
+The [NYC_green_taxi.ipynb](NYC_green_taxi.ipynb) consists of the entire code for the project.
 
 # Table of Contents (with hyperlinks)
  * [Data](#O)
