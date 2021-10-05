@@ -17,6 +17,12 @@
     * [Regression analysis](#D.7)
     * [Conclusion](#D.8)
   * [Visualize the data to help understand trip patterns](#E)
+    * [VendorID](#E.1)
+    * [Store and fwd flag](#E.2)
+    * [Rate Code ID](#E.3)
+    * [Passenger count](#E.4)
+    * [Pickups and dropoffs](#E.5)
+    * [Total Amount](#E.6)
   
 
 ## Data<a id="O"></a>
@@ -367,3 +373,83 @@ The most important features for getting better trips is as follows:
 ## Visualize the data to help understand trip patterns <a id="E"></a>
 #### VendorID <a id="E.1"></a>
 
+![](more_visualizations/VendorID.jpeg)
+
+- There is 4 times difference between the trips taken by vendor ID 1 and 2 for December 2016.
+
+![](more_visualizations/distribution_of_vendors_with_trip_distance.jpeg)
+
+- Trip Distance per VendorID
+- The distribution of both vendors in terms of trip distance is same. 
+- This means there is no particular vendor who is taking longer or shorter trips.
+
+![](more_visualizations/passenger_count_per_vendors.jpeg)
+
+- Passenger count per VendorID
+- This shows that vendor 2 generally carries more passengers as compared to vendor 1.
+
+#### Store and fwd flag<a id="E.2"></a>
+
+![](more_visualizations/storeandfwd_tripdist.jpeg)
+
+- Distribution of store and fwd flag with trip distance
+- Most of the time the trip is not stored.
+- When the trips are stored, it is done mostly for shorter distances.
+
+#### RatecodeID<a id="E.3"></a>
+1= Standard rate
+2=JFK
+3=Newark
+4=Nassau or Westchester
+5=Negotiated fare
+6=Group ride
+
+![](more_visualizations/ratecodeID.jpeg)
+
+- Most of the trips are standard rate code trips and 
+- 0.012% of those have negotiated fare.
+
+#### Passenger count<a id="E.4"></a>
+
+![](more_visualizations/Distribution_of_passenger_count.jpeg)
+
+- The passenger count is between 1 and 9 passengers.
+- Most of the rides have 1-2 passengers.
+
+#### Pickups and dropoffs<a id="E.5"></a>
+
+![](more_visualizations/no_of_pickups_dropoffs_per_day.jpeg)
+
+- The above graphs shows the distribution of number of pickups and dropoffs on each day of the week. 
+- We can see from the graph that maximum pickups and dropoffs are on Saturay followed by Friday. 
+- This could also be because December being holday season, People must be travelling to relatives and nearby places to spend time and enjoy.
+
+![](more_visualizations/no_of_pickups_dropoffs_each_time_of_day.jpeg)
+
+- The above graphs shows the distribution of number of pickups and dropoffs on each time of the day. 
+- We can see from the graph that maximum pickups and dropoffs are in the evening and minimum are in the afternoon.
+
+![](more_visualizations/distribution_pickups_dropoffs_hours.jpeg)
+
+- The above graph tells the same story as the distribution by time of day.
+- These graphs tells us the maximum pickups and dropoffs are between 6-8 p.m. in the evening which can be due to office going people and
+- It also suggests that people prefer taking public transport in the morning hours and take a cab during the evening hours when going back home.
+- minimum are between 4-6 a.m. in the morning.
+
+![](more_visualizations/avg_trip_distance_per_pickup_dropoff_day_of_week.jpeg)
+
+- The above graph shows the distribution of trip distance with days of the week. 
+-  We can see from the above graph that maximum distances are travelled on Sunday.
+
+
+#### total amount<a id="E.6"></a>
+
+![](more_visualizations/total_amount_billed_on_each day.jpeg)
+
+- The above plot shows the total amount billed on each day. 
+- We can see the amount is slightly higher on Friday as compared to other days.
+
+
+#### Conclusion and Future Work
+- Above is a basic visualization analysis of the trip data. In interest of time I will stop at this point.
+- As a future work, I will like to analyse the data further and understand how trip distance, fare etc are related to each other.
