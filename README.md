@@ -114,3 +114,62 @@ The right graph plots trip distance against pickup hour and from the graph we ca
 - The trip distance is maximum around 5 a.m. that maybe because of the long distance travel early morning rides. People who live far from there office have to start early to reach work.
 - The trip distance is minimum around 6 p.m- 7 p.m.
 
+## **The taxi drivers want to know what kind of trip yields better tips. Can you build a model for
+them and explain the model?**
+**Initial Analysis**
+- we will predict whether or not there will be a tip and how much the tip will be
+- Will have to build a classification and a regressor model for this
+- From data.corr() we can see that tip_amount is highly correlated with trip_distance, fare amount, total amount and payment type.
+- 85% of the total riders have paid tips
+- The tip percentage range from 0-100% with a mean of 14%.
+
+**Data Cleaning for tip classification and prediction**
+- Remove negative observations in variables- fare_amount, extra, mta_tax, tip_amount, improvement_surcharge, total_amount.
+- Only select credit card transactions because only credit card tips can be captured in the system.
+- Remove variable payment_type, because there are only credit card payments in the remaining data.
+- Convert variables into proper (categorical / date time) formats.
+
+**Feature Engineering for tip classification and prediction**
+- Created variable- tip percentage which is percentage of tip amount from total amount
+- Created our target variable- tip_given- 1/0 for classification
+- created a categorical variable for trip distance
+         - 0-2 miles: short distance
+         - 2-7 miles: medium distance
+         - 7 and above: large distance
+
+![](images/tip_given.jpeg)
+
+![](images/Histogram%20of%20tip%20percentage.jpeg)
+The distribution of the tip percentage is shown above. 
+- The mean tip percentage was 14.08% with a standard deviation of 7.5%. 
+- The tip percentage does not follow a normal distribution and is centered around a few typical values, i.e., 0%, 16-18%, 20%, 23%.
+
+![](images/tip_distance_category.jpeg)
+![](images/The%20Average%20Tip%20percentage%20per%20trip%20distance%20category.jpeg)
+From the above 2 plot we can see that
+
+- tip percentage are higher for short distances as compared to medium and long distances.
+- Also riders taking shorter trips between 0 and 2 miles are more likely to tip.
+- the average trip is around 14% for all distances.
+
+![](images/The%20Average%20Tip%20percentage%20per%20rate%20code%20ID.jpeg)
+- The rate code id 1 and 5 yeilds more tips as compared to other.
+
+![](images/The%20Average%20Tip%20percentage%20per%20mta%20tax.jpeg)
+- The tip percentage is higher for mta tax of 0.5.
+
+![](images/The%20Average%20Tip%20percentage%20per%20pickup%20time%20of%20day.jpeg)
+The tips are usually given more
+
+- if its a weekend.
+- During Latenight and Evening times
+
+![](images/The%20Average%20Tip%20percentage%20per%20passenger%20count.jpeg)
+Passenger count
+
+- 1 gives the most and the maximum tips
+- 2-6 gives lesser tips as compared to 1.
+- 7 and above give minimal tips.
+
+
+
