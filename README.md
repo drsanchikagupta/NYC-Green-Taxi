@@ -27,6 +27,9 @@ The [NYC_green_taxi.ipynb](NYC_green_taxi.ipynb) consists of the entire code for
   
 
 ## Data<a id="O"></a>
+The data is taken from [here](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+This analysis is run on December 2016 data.
+
 Let's first load the data and look at the shape of the dataframe
 ```
 df1.shape
